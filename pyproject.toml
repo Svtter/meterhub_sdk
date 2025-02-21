@@ -1,12 +1,14 @@
 [project]
-name = "meterhub_sdk"
+name = "meterhub"
 version = "0.1.0"
-description = "Default template for PDM package"
+description = "SDK for MeterHub"
 authors = [
     {name = "svtter", email = "svtter@qq.com"},
 ]
-dependencies = []
-requires-python = "==3.10.*"
+dependencies = [
+    "requests>=2.32.3"
+]
+requires-python = ">=3.10,<4.0"
 readme = "README.md"
 license = {text = "MIT"}
 
