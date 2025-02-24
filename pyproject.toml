@@ -1,6 +1,6 @@
 [project]
 name = "meterhub"
-version = "0.1.0"
+dynamic = ["version"]
 description = "SDK for MeterHub"
 authors = [
     {name = "svtter", email = "svtter@qq.com"},
@@ -14,4 +14,16 @@ license = {text = "MIT"}
 
 
 [tool.pdm]
-distribution = false
+distribution = true
+
+[tool.ruff]
+line-length = 88
+indent-width = 2
+
+[tool.pdm.version]
+source = "file"
+path = "meterhub/__init__.py"
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
